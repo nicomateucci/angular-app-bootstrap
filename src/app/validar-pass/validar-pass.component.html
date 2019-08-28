@@ -1,0 +1,70 @@
+
+<div>
+  Is Dirty {{formControl.dirty}}
+</div>
+<div>
+  Is Valid {{formControl.valid}}
+</div>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="firstName">
+  <input type="number" formControlName="lastName" maxlength="10">
+  <input type="text" formControlName="email" >
+
+  <button type="submit" [disabled]="profileForm.invalid">Enviar</button>
+</form>
+<!--
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="nombre" placeholder="Nombre ...">
+  <input type="text" formControlName="apellido" maxlength="10" placeholder="Apellido">
+  <input type="email" formControlName="email" placeholder="Email">
+  <input type="number" formControlName="contrasena" maxlength="4" placeholder="Pass numeros hasta 4">
+  <input type="number" formControlName="contrasena2" maxlength="4" placeholder="Repita Pass">
+
+  <button type="submit" [disabled]="profileForm.invalid">Enviar</button>
+</form>
+-->
+<button (click)="setFirstName()">FirstName</button>
+<div>
+  Is Dirty{{profileForm.dirty}}
+</div>
+
+<div> Is Valid {{profileForm.valid}}</div>
+
+<div> {{profileForm.controls.email.errors | json}}</div>
+<hr>
+<br>
+<div class="form-group">
+  <label>
+  Nombre:
+  <input type="text" [formControl]="nombre">
+</label>
+</div>
+
+<div class="form-group">
+<label>
+  Apellido:
+  <input type="text" [formControl]="apellido">
+</label>
+</div>
+
+<div class="form-group">
+<label>
+  Email:
+  <input type="text" [formControl]="email">
+</label>
+</div>
+
+<div class="form-group">
+<label>
+  Contraseña:
+  <input type="text" [formControl]="contrasena">
+</label>
+</div>
+
+<div class="form-group">
+<label>
+  Repetir contraseña:
+  <input type="text" [formControl]="contrasena2">
+</label>
+<button class="btn btn-primary" (click)="registrarPersona()">Registrarme</button>
+</div>
