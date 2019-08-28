@@ -8,8 +8,16 @@ import { FormControl } from '@angular/forms';
 })
 export class NameEditorComponent {
   name = new FormControl('');
+  apellido = new FormControl('');
 
   updateName() {
-  this.name.setValue('Nancy');
-}
+    this.name.setValue('Nancy');
+  }
+  setApellido(){
+    this.apellido.setValue('Flores');
+    console.log('Entro al metodo setApellido, apellido vale ' + this.apellido.value);
+  }
+  removeApellido(){
+    this.apellido.setValue('');
+  }
 }

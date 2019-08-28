@@ -3,8 +3,15 @@
   <input type="text" [formControl]="name">
 </label>
 <p>
-  Value: {{ name.value }}
+  Nombre: {{ name.value }}
+  <br>
+  Apellido: {{apellido.value}}
 </p>
 <p>
-  <button (click)="updateName()">Update Name</button>
+  <button class="btn btn-primary" (click)="updateName()">Update Name</button>
+  <br>
+  <button class="btn btn-warning" (click)="setApellido()">Mostrar apellido</button>
+  <br>
+  <button class="btn btn-danger" (click)="removeApellido()">Quitar apellido</button>
+
 </p>
