@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { ClaseFormulariosComponent } from './clase-formularios/clase-formularios.component';
 //import { PrimerPaginaComponent } from './primer-pagina/primer-pagina.component';
 //import {SegundaPaginaComponent} from './segunda-pagina/segunda-pagina.component';
 //import {NavegacionComponent} from './navegacion/navegacion.component';
@@ -17,13 +18,10 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       
-      /*{
-        path: 'primer-pagina',
-        component: PrimerPaginaComponent,
-        resolve: {
-          articles: PrimerPaginaResolver
-        }
-      },
+      {
+        path: 'claseFormularios',
+        component: ClaseFormulariosComponent,
+      },/*
       {
         path: 'segunda-pagina/:id',
         component: SegundaPaginaComponent,

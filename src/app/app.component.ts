@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular';
+  
+  setNombre = function(){
+    this.nombre.setValue("nombre")
+  }
 }
