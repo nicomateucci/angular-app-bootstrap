@@ -1,0 +1,30 @@
+<input type="text" [formControl]="formControl" >
+
+
+{{formControl.value}}
+
+<button (click)="setAndresName()">Set</button>
+
+
+<div>
+  Is Dirty{{formControl.dirty}}
+</div>
+<div>
+  Is Valid{{formControl.valid}}
+</div>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="firstName" placeholder="Nombre">
+  <input type="number" formControlName="lastName" placeholder="Numero max 10" maxlength="10">
+  <input type="text" formControlName="email" placeholder="Email">
+
+  <button type="submit" [disabled]="profileForm.invalid">Enviar</button>
+</form>
+<button (click)="setFirstName()">FirstName</button>
+<div>
+  Is Dirty{{profileForm.dirty}}
+</div>
+
+<div> Is Valid {{profileForm.valid}}</div>
+
+<div> {{profileForm.controls.email.errors | json}}</div>

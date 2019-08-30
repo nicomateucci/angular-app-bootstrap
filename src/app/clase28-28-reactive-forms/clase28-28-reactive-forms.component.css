@@ -1,0 +1,24 @@
+.odd {
+  background-color: rosybrown;
+  position: sticky;
+  top: 0;
+  left:0;
+  height: 200px;
+  width: 200px;
+}
+
+h1 {
+  margin: 0;
+}
+.even {
+  background-color: aquamarine;
+}
+
+.hola {
+  color: cadetblue;
+}
+
+.ng-invalid {
+  border: 5px solid tomato;
+  padding: 10px;
+}

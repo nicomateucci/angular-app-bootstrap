@@ -5,9 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { LoginComponent } from './login/login.component';
-import { ClaseFormulariosComponent } from './clase-formularios/clase-formularios.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NameEditorComponent } from './name-editor/name-editor.component';
+import { Clase2828ReactiveFormsComponent } from './clase28-28-reactive-forms/clase28-28-reactive-forms.component';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import { NameEditorComponent } from './name-editor/name-editor.component';
     ReactiveFormsModule
   
    ],
-  declarations: [ AppComponent, HelloComponent, LoginComponent, ClaseFormulariosComponent, NameEditorComponent ],
+  declarations: [ AppComponent, HelloComponent, LoginComponent, NameEditorComponent, Clase2828ReactiveFormsComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
