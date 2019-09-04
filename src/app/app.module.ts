@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { Clase2828ReactiveFormsComponent } from './clase28-28-reactive-forms/clase28-28-reactive-forms.component';
+import { PasswordValidatorService } from './password-validator.service';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { Clase2828ReactiveFormsComponent } from './clase28-28-reactive-forms/cla
   
    ],
   declarations: [ AppComponent, HelloComponent, LoginComponent, NameEditorComponent, Clase2828ReactiveFormsComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [PasswordValidatorService]
 })
 export class AppModule { }
